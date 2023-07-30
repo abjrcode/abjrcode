@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/stylesheets/main.bundle.css"
+    />
+    <script type="text/javascript">
+      const experience = [
+        {
+          from: '2018',
+          to: 'now',
+          title: 'Senior Software Engineer',
+          company: 'eVision Industry Software',
+          location: 'The Hague, Netherlands',
+          description: [
+            'Promotion with responsibilities covering planning, design, implementation, infrastructure and delivery',
+          ],
+        },
+        {
+          from: '2015',
+          to: '2018',
+          title: 'Software Engineer',
+          company: 'eVision Industry Software',
+          location: 'The Hague, Netherlands',
+          description: [
+            'Full Time DevOps Engineer with focus on efficient and optimal packaging and delivery of the company’s solutions both on-premise and in the cloud',
+            'Full stack developer as part of the lead team delivering the company’s flagship product',
+            'Part of a dedicated performance team which managed to drastically increase the run-time performance of the company’s main product in three months by more than 30%',
+          ],
+        },
+        {
+          from: '2013',
+          to: '2015',
+          title: 'Software Engineer',
+          company: 'Tartous Port',
+          location: 'Tartous, Syria',
+          description: [
+            'Full stack developer in charge of building several in-house line of business applications',
+            'The applications covered various domains including finance, warehouse management and accounting',
+            'We gradually moved the company from paper based processes to automated systems providing value for both customers and the business',
+          ],
+        },
+        {
+          from: '2007',
+          to: '2012',
+          title: 'Graduated',
+          company: 'Tishreen University',
+          location: 'Lattakia, Syria',
+          description: [],
+        },
+      ]
+
+      const education = [
+        {
+          from: '2019',
+          to: '2022',
+          title: 'AWS Certified Developer - Associate',
+          company: 'Amazon Web Services',
+          location: 'The Hague, Netherlands',
+          description: [],
+        },
+        {
+          from: '2007',
+          to: '2012',
+          title: 'Bachelor Degree in Computer Science',
+          company: 'Tishreen University',
+          location: 'Lattakia, Syria',
+          description: [],
+        },
+      ]
+    </script>
+    <title>Ibrahim Najjar&apos;s Resume</title>
+  </head>
+  <body class="grid grid-rows-[auto-1fr] grid-cols-[1fr,auto]">
+    <header class="flex flex-col items-start p-4 mb-4 border-b-2 row-span-1 col-span-2">
+      <h1 class="text-9xl tracking-tighter">Ibrahim Najjar</h1>
+      <p class="uppercase pl-8 text-lg">Software Engineer</p>
+    </header>
+    <main class="flex flex-col gap-6 px-6 py-2 col-start-1 col-end-2">
+      <h2 class="text-4xl mb-4">Professional Experience</h2>
+      <section
+        id="experience"
+        x-data="{ experience: experience }"
+        class="flex flex-col pl-12"
+      >
+        <template x-for="exp in experience">
+          <section class="relative pb-4">
+            <div class="absolute top-0 bottom-0 w-[1px] -left-4 bg-black"></div>
+            <div class="inline-block relative">
+              <div
+                class="absolute right-[100%] top-[50%] translate-x-[-10px] translate-y-[-50%] flex flex-row items-center gap-1"
+              >
+                <span
+                  class="text-xs"
+                  x-text="exp.to"
+                ></span>
+                <span class="inline-block w-2.5 h-2.5 bg-black rounded-lg"></span>
+              </div>
+              <h2
+                class="text-2xl"
+                x-text="exp.title"
+              ></h2>
+            </div>
+            <div class="flex">
+              <div class="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="inline-block w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
+                  />
+                </svg>
+
+                <span x-text="exp.company"></span>
+              </div>
+              <div class="flex items-center gap-1 ml-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="inline-block w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
+                </svg>
+                <span x-text="exp.location"></span>
+              </div>
+            </div>
+            <div>
+              <ul class="list-disc pl-6">
+                <template x-for="desc in exp.description">
+                  <li x-text="desc"></li>
+                </template>
+              </ul>
+            </div>
+          </section>
+        </template>
+      </section>
+
+      <h2 class="text-4xl mb-4">Education</h2>
+      <section
+        id="education"
+        x-data="{ education: education }"
+        class="flex flex-col pl-12"
+      >
+        <template x-for="edu in education">
+          <section class="relative pb-4">
+            <div class="absolute top-0 bottom-0 w-[1px] -left-4 bg-black"></div>
+            <div class="inline-block relative">
+              <div
+                class="absolute right-[100%] top-[50%] translate-x-[-10px] translate-y-[-50%] flex flex-row items-center gap-1"
+              >
+                <span
+                  class="text-xs"
+                  x-text="edu.to"
+                ></span>
+                <span class="inline-block w-2.5 h-2.5 bg-black rounded-lg"></span>
+              </div>
+              <h2
+                class="text-2xl"
+                x-text="edu.title"
+              ></h2>
+            </div>
+            <div class="flex">
+              <div class="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="inline-block w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+                  />
+                </svg>
+
+                <span x-text="edu.company"></span>
+              </div>
+              <div class="flex items-center gap-1 ml-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="inline-block w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
+                </svg>
+                <span x-text="edu.location"></span>
+              </div>
+            </div>
+            <div>
+              <ul class="list-disc pl-6">
+                <template x-for="desc in edu.description">
+                  <li x-text="desc"></li>
+                </template>
+              </ul>
+            </div>
+          </section>
+        </template>
+      </section>
+    </main>
+    <aside class="relative lg:max-w-sm sm:max-w-xs flex flex-col gap-6 px-6 py-4 col-start-2 col-end-3">
+      <div
+        class="absolute top-0 bottom-0 w-[1px] -left-2 scale-y-[94%] bg-[length:2px_4px] bg-repeat-y bg-gradient-to-b from-gray-400 to-white"
+      ></div>
+      <section id="profile">
+        <h3 class="text-2xl">Profile</h3>
+        <p>
+          Passionate engineer with 5+ years of experience. I love working with people, learning new things and tackling
+          difficult challenges. I just do it.
+        </p>
+        <br />
+        <p>/♥Thinking,Knowledge/gui</p>
+      </section>
+      <section id="skills">
+        <h3 class="text-2xl">Main Skills</h3>
+        <ul class="list-disc">
+          <li><strong>Architecture:</strong>Layered, Domain Driven Design, Event Sourcing and CQRS</li>
+          <li><strong>Development Methodologies:</strong>Agile, TDD</li>
+          <li><strong>Backend:</strong>.NET, .NET Core, ASP.NET, C#</li>
+          <li><strong>Frontend:</strong>Web Development, JavaScript</li>
+          <li><strong>Cloud & Automation:</strong>PowerShell, ash, Terraform and AWS</li>
+          <li><strong>Operating Systems:</strong>Windows, Linux</li>
+          <li><strong>Database Systems:</strong>Microsoft SQL Server</li>
+          <li><strong>Social:</strong>Honest, fun spirit and love to help others</li>
+          <li><strong>Misc.:</strong>Git, GitFlow, TeamCity, Immutable Infrastructure, Packer</li>
+        </ul>
+      </section>
+      <section id="hobbies">
+        <h3 class="text-2xl">Passion &amp; Hobbies</h3>
+        <ul class="list-disc">
+          <li>Operating Systems</li>
+          <li>Compilers</li>
+          <li>Reading &amp; Learning</li>
+          <li>Fight Sports</li>
+          <li>Video Games</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h3 class="text-2xl">Contact Infomration</h3>
+        <ul class="list-disc">
+          <li>abnajjar@hotmail.com</li>
+          <li>+31614736206</li>
+          <li>https://www.linkedin.com/in/abjrcode/</li>
+          <li>https://github.com/abjrcode</li>
+          <li>https://stackoverflow.com/users/439667/ibrahim-najjar</li>
+        </ul>
+      </section>
+      <section contact="info">
+        <h3 class="text-2xl">Personal Details</h3>
+        <ul class="list-disc">
+          <li>
+            <label>Birthdate: </label>
+            <span>04 January 1990</span>
+          </li>
+          <li>
+            <label>Address: </label>
+            <span>The Hague, Netherlands</span>
+          </li>
+        </ul>
+      </section>
+    </aside>
+  </body>
+</html>
