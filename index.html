@@ -59,9 +59,9 @@
           company: 'eVision Industry Software',
           location: 'The Hague, Netherlands',
           description: [
-            'Full time DevOps Engineer with focus on efficient and optimal packaging and delivery of the company’s solutions both on-premise and in the cloud',
+            'Full time DevOps Engineer with focus on efficient delivery of the company’s solutions both on-premise and in the cloud',
             'Full stack developer as part of the lead team delivering the company’s flagship product',
-            'Part of a dedicated performance team which managed to drastically increase the run-time performance of the company’s main product in three months by more than 30%',
+            'Part of a performance team which improved the performance of the flagship product within three months by more than 30%',
           ],
         },
         {
@@ -73,7 +73,7 @@
           description: [
             'Full stack developer in charge of building several in-house line of business applications',
             'The applications covered various domains including finance, warehouse management and accounting',
-            'We gradually moved the company from paper based processes to automated systems providing value for both customers and the business',
+            'We gradually moved the company from paper based processes to automated systems',
           ],
         },
       ]
@@ -99,16 +99,16 @@
     </script>
     <title>Ibrahim Najjar&apos;s Resume</title>
   </head>
-  <body class="font-['IBM_Plex_Sans'] grid grid-rows-[auto-1fr] grid-cols-[5fr,1fr]">
-    <header class="flex flex-col items-start p-2 mb-1 border-b-2 row-span-1 col-span-2 shadow-sm">
+  <body class="font-['IBM_Plex_Sans'] grid grid-rows-[auto-1fr] grid-cols-[5fr,2fr]">
+    <header class="flex flex-col items-start p-2 pb-2 mb-2 border-b-2 row-span-1 col-span-2 shadow-sm">
       <h1 class="text-8xl tracking-tight">Ibrahim Najjar</h1>
       <div class="flex items-center pl-10">
         <span class="uppercase text-lg">Software Engineer</span>
         <span class="pl-2 text-xs font-light normal-case">/♥ Learning &amp; Thinking/gi</span>
       </div>
     </header>
-    <main class="flex flex-col gap-4 px-6 py-2 col-start-1 col-end-2">
-      <div class="flex items-center gap-2">
+    <main class="flex flex-col px-6 col-start-1 col-end-2">
+      <div class="flex items-center gap-2 mb-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -130,7 +130,7 @@
         class="flex flex-col pl-12"
       >
         <template x-for="exp in experience">
-          <section class="relative pb-4">
+          <section class="relative pb-1">
             <div class="absolute top-0 bottom-0 w-[1px] -left-4 bg-black"></div>
             <div class="inline-block relative">
               <div
@@ -189,7 +189,7 @@
                 <span x-text="exp.location"></span>
               </div>
             </div>
-            <div class="mt-3">
+            <div class="mt-2">
               <ul class="list-disc pl-6">
                 <template x-for="desc in exp.description">
                   <li x-text="desc"></li>
@@ -200,7 +200,7 @@
         </template>
       </section>
 
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 mb-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -296,33 +296,32 @@
         </template>
       </section>
     </main>
-    <aside class="relative lg:max-w-md print:w-64 flex flex-col gap-4 pl-2 pr-6 py-4 col-start-2 col-end-3">
+    <aside class="relative text-sm lg:max-w-md print:w-64 flex flex-col gap-4 pl-2 pr-6 col-start-2 col-end-3">
       <div
         class="absolute top-0 bottom-0 w-[1px] -left-2 scale-y-[94%] bg-[length:2px_4px] bg-repeat-y bg-gradient-to-b from-gray-400 to-white"
       ></div>
       <section id="profile">
-        <h3 class="text-2xl">Profile</h3>
+        <h3 class="text-xl">Profile</h3>
         <p>
           Passionate software engineer with 10+ years of experience. I love working with people, learning new things and
           tackling difficult challenges.
         </p>
       </section>
       <section id="skills">
-        <h3 class="text-2xl">Main Skills</h3>
+        <h3 class="text-xl">Main Skills</h3>
         <ul class="[&_strong]:font-medium [&_strong]:pr-1">
-          <li><strong>Architecture:</strong>Layered, Domain Driven Design, Event Sourcing and CQRS</li>
+          <li><strong>Architecture:</strong>Layered, Domain Driven Design, Event Sourcing &amp; CQRS</li>
           <li><strong>Development Methodologies:</strong>Agile, TDD</li>
-          <li><strong>Backend:</strong>.NET, .NET Core, ASP.NET, C#, NodeJS &amp; TypeScript</li>
+          <li><strong>Backend:</strong>.NET, ASP.NET, C#, NodeJS &amp; TypeScript</li>
           <li><strong>Frontend:</strong>HTML, CSS &amp; JavaScript</li>
-          <li><strong>Cloud & Automation:</strong>Pulumi, PowerShell, bash, Terraform &amp; AWS</li>
+          <li><strong>Cloud & Automation:</strong>Pulumi, PowerShell, Bash, Terraform &amp; AWS</li>
           <li><strong>Operating Systems:</strong>Windows &amp; Linux</li>
           <li><strong>Database Systems:</strong>Postgres &amp; Microsoft SQL Server</li>
-          <li><strong>Social:</strong>Fun spirit and I love to help others</li>
-          <li><strong>Misc.:</strong>Git, Infrastructure as Code, Packer</li>
+          <li><strong>Misc.:</strong>Git, Infrastructure as Code &amp; Packer</li>
         </ul>
       </section>
       <section id="contact">
-        <h3 class="text-2xl">Contact Information</h3>
+        <h3 class="text-xl">Contact Information</h3>
         <ul>
           <li class="flex items-center gap-1">
             <svg
@@ -401,7 +400,7 @@
         </ul>
       </section>
       <section id="hobbies">
-        <h3 class="text-2xl">Passion &amp; Hobbies</h3>
+        <h3 class="text-xl">Passion &amp; Hobbies</h3>
         <ul class="">
           <li>- Operating Systems</li>
           <li>- Compilers</li>
@@ -411,7 +410,7 @@
         </ul>
       </section>
       <section contact="info">
-        <h3 class="text-2xl">Personal Details</h3>
+        <h3 class="text-xl">Personal Details</h3>
         <ul>
           <li class="flex items-center gap-1">
             <svg
