@@ -1,9 +1,4 @@
 # My Personal Resume
 
-- Inspired by https://github.com/mnjul/html-resume
-
-# Usage
-
-```
-npm start
-```
+- [Take a look at https://abjrcode.github.io](https://abjrcode.github.io)
+  - Inspired by https://github.com/mnjul/html-resume
