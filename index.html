@@ -37,9 +37,8 @@
           company: 'Someday',
           location: 'Amsterdam, Netherlands',
           description: [
-            'Joined the startup and helped build the financial product from scratch',
-            'Built the backend and infrastructure from scratch using NodeJS, TypeScript, AWS and Pulumi',
-            'Hired and managed a team of senior backend engineers',
+            'Joined FinTech startup and built product from scratch',
+            'Hired and managed a team of Senior Backend engineers',
           ],
         },
         {
@@ -59,8 +58,8 @@
           company: 'eVision Industry Software',
           location: 'The Hague, Netherlands',
           description: [
-            'Full time DevOps Engineer with focus on efficient delivery of the company’s solutions both on-premise and in the cloud',
-            'Full stack developer as part of the lead team delivering the company’s flagship product',
+            'Platform Engineer with focus on efficient delivery of the company’s solutions both on-premise and in the cloud',
+            'Fullstack developer as part of the lead team delivering the company’s flagship product',
             'Part of a performance team which improved the performance of the flagship product within three months by more than 30%',
           ],
         },
@@ -100,9 +99,11 @@
     <title>Ibrahim Najjar&apos;s Resume</title>
   </head>
   <body class="font-['IBM_Plex_Sans'] grid grid-rows-[auto-1fr] grid-cols-[5fr,2fr]">
-    <header class="flex flex-col items-start p-2 pb-2 mb-2 border-b-2 row-span-1 col-span-2 shadow-sm">
+    <header
+      class="relative flex flex-col items-start p-2 pb-4 mb-4 border-b-[1px] border-dotted border-gray-500 row-span-1 col-span-2 shadow-sm"
+    >
       <h1 class="text-8xl tracking-tight">Ibrahim Najjar</h1>
-      <div class="flex items-center pl-10">
+      <div class="absolute left-20 -bottom-2 flex items-center pl-10">
         <span class="uppercase text-lg">Software Engineer</span>
         <span class="pl-2 text-xs font-light normal-case">/♥ Learning &amp; Thinking/gi</span>
       </div>
@@ -226,7 +227,7 @@
         class="flex flex-col pl-12"
       >
         <template x-for="edu in education">
-          <section class="relative pb-4">
+          <section class="relative pb-2">
             <div class="absolute top-0 bottom-0 w-[1px] -left-4 bg-black"></div>
             <div class="inline-block relative">
               <div
@@ -405,7 +406,7 @@
             <a
               target="_blank"
               href="https://stackoverflow.com/users/439667/ibrahim-najjar"
-              >stackoverflow.com/users/439667/ibrahim-najjar</a
+              >stackoverflow.com/users/439667</a
             >
           </li>
         </ul>
