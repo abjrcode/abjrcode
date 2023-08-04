@@ -12,13 +12,16 @@
   "scripts": {
     "start": "concurrently -k -c blue,magenta -n APP,CSS \"npm:dev:server\" \"npm:dev:css\"",
     "dev:server": "vite --port 3000 --open",
-    "dev:css": "cross-var $npm_package_config_css --watch"
+    "dev:css": "cross-var $npm_package_config_css --watch",
+    "build": "cross-var $npm_package_config_css --minify",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.0",
     "cross-var": "^1.1.0",
     "esbuild": "^0.18.11",
+    "husky": "^8.0.3",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
     "serve": "^14.2.0",

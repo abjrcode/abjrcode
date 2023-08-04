@@ -139,6 +139,3 @@ setenvs.sh
 
 # Pycharm
 **/.idea/*
-
-# Ignore built files
-public/stylesheets/*
