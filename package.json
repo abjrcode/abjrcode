@@ -7,7 +7,7 @@
     "name": "Ibrahim Najjar"
   },
   "config": {
-    "css": "tailwindcss -i bundle/main.pcss -o public/stylesheets/main.bundle.css --postcss"
+    "css": "tailwindcss -i bundle/main.pcss -o stylesheets/main.bundle.css --postcss"
   },
   "scripts": {
     "start": "concurrently -k -c blue,magenta -n APP,CSS \"npm:dev:server\" \"npm:dev:css\"",
