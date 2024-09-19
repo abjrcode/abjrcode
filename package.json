@@ -14,19 +14,19 @@
     "dev:server": "vite --port 3000 --open",
     "dev:css": "cross-var $npm_package_config_css --watch",
     "build": "cross-var $npm_package_config_css --minify",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.1",
     "cross-var": "^1.1.0",
-    "esbuild": "^0.19.11",
-    "husky": "^8.0.3",
-    "postcss": "^8.4.33",
-    "postcss-import": "^16.0.0",
-    "serve": "^14.2.1",
-    "tailwindcss": "^3.4.1",
+    "esbuild": "^0.23.1",
+    "husky": "^9.1.6",
+    "postcss": "^8.4.47",
+    "postcss-import": "^16.1.0",
+    "serve": "^14.2.3",
+    "tailwindcss": "^3.4.12",
     "tailwindcss-debug-screens": "^2.2.1",
-    "vite": "^5.0.11"
+    "vite": "^5.4.6"
   }
 }
